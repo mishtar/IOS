@@ -12,6 +12,9 @@
 		3C1725D41F75ADD3005E0DEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C1725D31F75ADD3005E0DEA /* Assets.xcassets */; };
 		3C1725D71F75ADD3005E0DEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C1725D51F75ADD3005E0DEA /* LaunchScreen.storyboard */; };
 		3C1725E01F75AE25005E0DEA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1725DF1F75AE25005E0DEA /* ViewController.swift */; };
+		AC48CD701F75D48A00232B06 /* SaludoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48CD6F1F75D48A00232B06 /* SaludoViewController.swift */; };
+		AC48CD721F75F1E700232B06 /* PresentarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48CD711F75F1E700232B06 /* PresentarViewController.swift */; };
+		AC48CD741F75F55800232B06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC48CD731F75F55800232B06 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		3C1725D61F75ADD3005E0DEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C1725D81F75ADD3005E0DEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C1725DF1F75AE25005E0DEA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC48CD6F1F75D48A00232B06 /* SaludoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaludoViewController.swift; path = ../../SaludoViewController.swift; sourceTree = "<group>"; };
+		AC48CD711F75F1E700232B06 /* PresentarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentarViewController.swift; path = ../../PresentarViewController.swift; sourceTree = "<group>"; };
+		AC48CD731F75F55800232B06 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +60,8 @@
 		3C1725CB1F75ADD3005E0DEA /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				3C1725DE1F75AE25005E0DEA /* Controllers */,
 				3C1725CC1F75ADD3005E0DEA /* AppDelegate.swift */,
+				3C1725DE1F75AE25005E0DEA /* Controllers */,
 				3C1725D01F75ADD3005E0DEA /* Main.storyboard */,
 				3C1725D31F75ADD3005E0DEA /* Assets.xcassets */,
 				3C1725D51F75ADD3005E0DEA /* LaunchScreen.storyboard */,
@@ -67,7 +73,10 @@
 		3C1725DE1F75AE25005E0DEA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AC48CD6F1F75D48A00232B06 /* SaludoViewController.swift */,
+				AC48CD711F75F1E700232B06 /* PresentarViewController.swift */,
 				3C1725DF1F75AE25005E0DEA /* ViewController.swift */,
+				AC48CD731F75F55800232B06 /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -144,8 +153,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC48CD701F75D48A00232B06 /* SaludoViewController.swift in Sources */,
 				3C1725E01F75AE25005E0DEA /* ViewController.swift in Sources */,
 				3C1725CD1F75ADD3005E0DEA /* AppDelegate.swift in Sources */,
+				AC48CD741F75F55800232B06 /* LoginViewController.swift in Sources */,
+				AC48CD721F75F1E700232B06 /* PresentarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +319,7 @@
 				3C1725DD1F75ADD3005E0DEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

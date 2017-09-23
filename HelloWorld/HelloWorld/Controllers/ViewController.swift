@@ -10,10 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    
+    // MARK: - IBOutlet
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var welcomeLabel: UILabel!
     
     
+    // MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,26 +27,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Navigation
     
-    @IBAction func sendName(_ sender: Any) {
-        
-        if (nameTextField.text?.characters.count)! > 0 {
-            welcomeLabel.text = "Welcome \(nameTextField.text!)!!!"
-            welcomeLabel.isHidden = false
-            
-        }else {
-            welcomeLabel.isHidden = true
-            
-            let alertController = UIAlertController(title: "Error", message: "Debes digitar tu nombre", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertController.addAction(okAction)
-            present(alertController, animated: true, completion: nil)
-        }
-        
-        view.endEditing(true)
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return !(nameTextField.text?.isEmpty)!
         
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is SaludoViewController {
+            let SaludoVC = segue.destination as! SaludoViewController
+            SaludoVC.names = nameTextField.text!
+            
+        }
+    }
 
 
 }
